@@ -6,24 +6,23 @@ import './Main.scss'
 
 import dataJSN from '../../data/data.json'
 
-interface Data {}
-
 const Main = () => {
   const [data, setData] = useState([...dataJSN])
-  console.log(data)
   return (
     <main className="main container">
       <div className="main__cards flex flex-wrap flex-between">
-        {data.map(({ name, capital, population, region, flag }) => (
-          <Card
-            key={name}
-            capital={capital}
-            countryName={name}
-            population={population}
-            region={region}
-            flagImg={flag}
-          />
-        ))}
+        {data.map(({ name, capital, population, region, flag }, index) =>
+          index < 8 ? (
+            <Card
+              key={name}
+              capital={capital}
+              countryName={name}
+              population={population}
+              region={region}
+              flagImg={flag}
+            />
+          ) : null
+        )}
       </div>
     </main>
   )

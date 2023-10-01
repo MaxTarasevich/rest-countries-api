@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../layout/layout.astro";
+import Header from "../components/Header/Header.astro";
+import BackPanel from '../components/BackPanel/BackPanel.astro'
+import Country from '../components/Country/Country.astro'
+
+import dataCounry from '../data/data.json'
+
+export const getStaticPaths = (() => {
+    
+    return dataCounry.map((country)=>(
+   {
+    params: {country: country.name},
+    props: { data:country},
+    }
+    )
+       
+    );
+}) satisfies GetStaticPaths;
+
+const {country} = Astro.params
+const {data} = Astro.props
+---
+
+<Layout>
+    <Header />
+    <BackPanel />
+    Country: {data.capital}
+</Layout>

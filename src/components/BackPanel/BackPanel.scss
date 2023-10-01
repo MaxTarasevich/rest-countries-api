@@ -1,0 +1,27 @@
+.backPanel {
+  padding: 80px 0px;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 32px;
+    color: var(--text);
+    background-color: var(--bg-header);
+    gap: 4px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+
+    transition: all 0.4s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    svg {
+      path {
+        transition: all 0.4s ease;
+        fill: var(--text);
+      }
+    }
+  }
+}

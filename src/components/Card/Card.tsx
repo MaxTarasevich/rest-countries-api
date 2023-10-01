@@ -18,7 +18,7 @@ const Card: FC<Props> = ({
   flagImg,
 }) => {
   return (
-    <div className="card">
+    <a className="card" href={countryName}>
       <div className="card__flag">
         <img src={flagImg} alt={`${countryName} flag`} />
       </div>
@@ -38,7 +38,7 @@ const Card: FC<Props> = ({
           </li>
         </ul>
       </div>
-    </div>
+    </a>
   )
 }
 
