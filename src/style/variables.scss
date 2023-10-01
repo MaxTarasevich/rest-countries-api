@@ -1,0 +1,16 @@
+:root {
+  --elements: hsl(0, 0%, 100%); /*(Dark Mode Text & Light Mode Elements)*/
+  --bg: hsl(0, 0%, 98%); /*(Light Mode Background)*/
+  --bg-header: hsla(0, 0%, 100%, 1);
+  --text: hsl(200, 15%, 8%); /*(Light Mode Text)*/
+  --input: hsl(0, 0%, 52%); /*(Light Mode Input)*/
+}
+
+/*Dark mode*/
+
+html.dark {
+  --elements: hsl(209, 23%, 22%); /*(Dark Mode Elements)*/
+  --bg: hsl(207, 26%, 17%); /*(Dark Mode Background)*/
+  --bg-header: hsla(209, 23%, 22%, 1);
+  --text: hsl(0, 0%, 100%); /*text*/
+}
